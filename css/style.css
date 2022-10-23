@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#firstpage {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(54, 203, 136, 0.134)), url("../images/person-822803_1920.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding : 40px;
+}
+
+.logo a img {
+    width: 100px;
+}
+
+.logo a img:hover {
+    transform: rotateY(150deg);
+    transition : all;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(174, 203, 13, 0.39);
+    border-radius: 20px;
+}
+.navbar ul li {
+    list-style: none;
+    padding: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgb(8, 8, 8);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar ul li a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: aqua;
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover::after {
+    width: 80%;
+}
+
+.heading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.heading h2 {
+    font-family: 'Allura', cursive;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 10px rgb(9, 9, 9);
+}
+
+.heading h3 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: linear-gradient(darkgreen, green, lightgreen);
+    padding: 5px;
+}
+
+.buttons {
+    margin: 50px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.buttons button {
+    width: 200px;
+    padding: 10px;
+    margin-right: 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons button a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.buttons button > span {
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.buttons button:hover span{
+    width: 100%;
+}
+
+.buttons button:hover {
+    background-color: transparent;
+    border: transparent;
+}
+
+.buttons button:hover a {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+@media screen and (max-width:768px) {
+    .navbar {
+        /* navbar 85% -> 100% */
+        width: 100%; 
+    }
+    .logo {
+        width: 60px;
+    }
+    .navbar ul li a {
+        font-size: 14px;
+    }
+    .navbar ul li {
+        margin: 0 5px;
+    }
+    .heading h2 {
+        font-size: 60px;        
+    }
+    .heading p {
+        font-size: 16px;
+    }
+    .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    }
+    .buttons button a {
+    font-size: 16px;
+    }
+}
